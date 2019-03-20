@@ -15,5 +15,4 @@
    ENV PORT 8080
 
    # Run the web service on container startup.
-   CMD "set FLASK_APP=app.py"
-   CMD "flask run"
+   CMD ["python", "app.py"]
