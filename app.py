@@ -8,6 +8,7 @@
     :copyright: (c) 2015 by Grey li.
     :license: MIT, see LICENSE for more details.
 """
+import os
 import re
 from flask import Flask, jsonify, render_template, request
 
@@ -37,4 +38,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
